@@ -1,0 +1,11 @@
+path: dataset
+
+train: train
+val: val
+
+names:
+  0: granit
+  1: bazalt
+  2: kuvars
+  3: kalker
+  4: mermer
