@@ -76,7 +76,28 @@ async def analyze(file: UploadFile = File(...)):
         float(probs.top1conf) * 100,
         2
     )
+    quality_score = min(
+        100,
+        round(confidence * 0.9)
+    )
+    PRICE_TABLE = {
+        "Granit": 1800,
+        "Bazalt": 1200,
+        "Kuvars": 8000,
+        "Kalker": 600,
+        "Mermer": 5000
+    }
 
+    base_price = PRICE_TABLE.get(
+        stone,
+        1000
+    )
+
+    estimated_price = round(
+        base_price *
+        (quality_score / 100),
+        0
+    )
     info = STONE_DATABASE[stone]
 
     return {
@@ -86,4 +107,6 @@ async def analyze(file: UploadFile = File(...)):
         "value": info["value"],
         "usage": info["usage"],
         "description": info["description"]
+        "quality_score": quality_score,
+        "estimated_price": estimated_price,
     }
