@@ -9,36 +9,39 @@ model = YOLO("models/stone_v1.pt")
 STONE_DATABASE = {
     "Granit": {
         "hardness": "6-7",
-        "value": "Orta",
-        "usage": "Yapı taşı, mezar taşı, mutfak tezgahı",
-        "description": "Magmatik kökenli çok dayanıklı kayaç."
+        "value": "1200-2500 TL/Ton",
+        "usage": "Yapı taşı, mezar taşı, mutfak tezgahi",
+        "description": "Magmatik kökenli cok dayanikli kayac."
     },
+
     "Bazalt": {
         "hardness": "6",
-        "value": "Orta",
-        "usage": "Yol yapımı, parke taşı, inşaat",
-        "description": "Volkanik kökenli koyu renkli kayaç."
+        "value": "900-1800 TL/Ton",
+        "usage": "Yol yapimi, parke tasi, insaat",
+        "description": "Volkanik kokenli koyu renkli kayac."
     },
+
     "Kuvars": {
         "hardness": "7",
-        "value": "Orta-Yüksek",
-        "usage": "Cam, elektronik, takı",
-        "description": "Yüksek silis oranına sahip sert mineral."
+        "value": "3000-12000 TL/Ton",
+        "usage": "Cam, elektronik, taki",
+        "description": "Yuksek silis oranina sahip sert mineral."
     },
+
     "Kalker": {
         "hardness": "3",
-        "value": "Düşük",
-        "usage": "Çimento, kireç, yapı malzemesi",
-        "description": "Sedimanter kökenli kalsiyum karbonat kayaç."
+        "value": "300-900 TL/Ton",
+        "usage": "Cimento, kirec, yapi malzemesi",
+        "description": "Sedimanter kokenli kalsiyum karbonat kayac."
     },
+
     "Mermer": {
         "hardness": "3-4",
-        "value": "Yüksek",
+        "value": "2500-15000 TL/Ton",
         "usage": "Kaplama, dekorasyon, heykel",
-        "description": "Metamorfik kökenli dekoratif kayaç."
+        "description": "Metamorfik kokenli dekoratif kayac."
     }
 }
-
 STONE_NAMES = {
     0: "Granit",
     1: "Bazalt",
